@@ -19,15 +19,22 @@ export async function fetchTokenBalances({
   includePrices = true,
   includeNative = true,
   sdkId = process.env.EXPO_PUBLIC_ENVIRONMENT_ID as string,
+  token,
 }: {
   accountAddress: string;
   networkId?: number;
   includePrices?: boolean;
   includeNative?: boolean;
   sdkId?: string;
+  token: string;
 }): Promise<TokenBalance[]> {
   const url = `https://app.dynamicauth.com/api/v0/sdk/${sdkId}/chains/EVM/balances?networkId=${networkId}&accountAddress=${accountAddress}&includePrices=${includePrices}&includeNative=${includeNative}`;
-  const options = { method: "GET" };
+  const options: RequestInit = {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
   try {
     const response = await fetch(url, options);
     if (!response.ok) {
