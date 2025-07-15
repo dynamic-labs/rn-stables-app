@@ -2,17 +2,16 @@ import { CommonActions, useNavigation } from "@react-navigation/native";
 import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { FC, useEffect } from "react";
 import {
-  Button,
   Dimensions,
+  Image,
   PixelRatio,
   StyleSheet,
   Text,
-  View,
   TouchableOpacity,
-  Image,
+  View,
 } from "react-native";
-import { client } from "../client";
 import LogoText from "../assets/images/logo-text.svg";
+import { client } from "../client";
 
 export type RootStackParamList = {
   Home: undefined;

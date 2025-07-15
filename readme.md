@@ -21,8 +21,8 @@ Follow these steps to get the app up and running:
 2. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/dynamic-labs/react-native-stablecoin-app.git
-   cd react-native-stablecoin-app
+   git clone https://github.com/dynamic-labs/rn-stables-app.git
+   cd rn-stables-app
    ```
 
 3. **Install dependencies:**
