@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function Page({ params }: any) {
   const { paymentLinkId } = params;
-  const deepLink = `ReactNativeStablecoinApp://send/${paymentLinkId}`;
+  const deepLink = `StablesDemo://send/${paymentLinkId}`;
 
   if (typeof window === "undefined") {
     // Server-side: perform redirect for crawlers and direct navigation

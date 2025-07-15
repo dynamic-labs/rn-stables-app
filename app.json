@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "react-native-stablecoin-app",
-    "slug": "react-native-stablecoin-app",
-    "scheme": "ReactNativeStablecoinApp",
+    "name": "stables-demo",
+    "slug": "stables-demo",
+    "scheme": "StablesDemo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/icon.png",
@@ -21,7 +21,7 @@
       "infoPlist": {
         "CFBundleURLTypes": [
           {
-            "CFBundleURLSchemes": ["ReactNativeStablecoinApp"]
+            "CFBundleURLSchemes": ["StablesDemo"]
           }
         ]
       }
@@ -42,7 +42,7 @@
               "host": "stables-deeplink.vercel.app"
             },
             {
-              "scheme": "ReactNativeStablecoinApp"
+              "scheme": "StablesDemo"
             }
           ],
           "category": ["BROWSABLE", "DEFAULT"]

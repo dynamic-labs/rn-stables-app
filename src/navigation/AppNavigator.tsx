@@ -25,10 +25,7 @@ const Tab = createBottomTabNavigator();
 
 // Deep linking configuration
 const linking = {
-  prefixes: [
-    "ReactNativeStablecoinApp://",
-    "https://stables-deeplink.vercel.app",
-  ],
+  prefixes: ["StablesDemo://", "https://stables-deeplink.vercel.app"],
   config: {
     screens: {
       MainApp: {
