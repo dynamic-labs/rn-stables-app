@@ -160,7 +160,10 @@ const HomeScreen: React.FC = () => {
     try {
       if (!wallets.primary) return;
       const accountAddress = wallets.primary.address;
-      const tokens = await fetchTokenBalances({ accountAddress });
+      const tokens = await fetchTokenBalances({
+        accountAddress,
+        token: auth.token || "",
+      });
       setTokenBalances(tokens);
       // Prefer USDC, fallback to native
       const usdc = tokens.find(

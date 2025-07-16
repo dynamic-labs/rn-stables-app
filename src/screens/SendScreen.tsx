@@ -83,7 +83,10 @@ const SendScreen = () => {
         const primaryWallet = client.wallets.primary;
         if (!primaryWallet) return;
         const accountAddress = primaryWallet.address;
-        const tokens = await fetchTokenBalances({ accountAddress });
+        const tokens = await fetchTokenBalances({
+          accountAddress,
+          token: auth.token || "",
+        });
         setTokenBalances(tokens);
         // Prefer USDC, fallback to native
         const usdc = tokens.find(
