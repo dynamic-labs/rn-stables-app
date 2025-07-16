@@ -31,11 +31,20 @@ Follow these steps to get the app up and running:
    npm install
    ```
 
-4. **(Optional) Configure a `.env` File with Your Dynamic Environment ID:**
+4. **(Optional) Configure a `.env` File with Your Environment Variables:**
+
+   Create a `.env` file in the root directory with the following variables:
 
    ```bash
+   # Dynamic configuration
    EXPO_PUBLIC_ENVIRONMENT_ID=<dynamic project environment id>
+
+   # Supabase configuration
+   EXPO_PUBLIC_SUPABASE_URL=<your-supabase-project-url>
+   EXPO_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
    ```
+
+   **Note:** You'll need to create a Supabase project and get your project URL and anon key from your [Supabase dashboard](https://supabase.com/dashboard).
 
 5. **Start the application:**
 
